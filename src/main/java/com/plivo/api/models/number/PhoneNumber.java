@@ -4,6 +4,7 @@ import com.plivo.api.models.base.BaseResource;
 
 public class PhoneNumber extends BaseResource {
 
+  private String city;
   private String country;
   private Integer lata;
   private String monthlyRentalRate;
@@ -17,6 +18,8 @@ public class PhoneNumber extends BaseResource {
   private String setupRate;
   private Boolean smsEnabled;
   private String smsRate;
+  private Boolean mmsEnabled;
+  private String mmsRate;
   private Boolean voiceEnabled;
   private String voiceRate;
   private NumberType type;
@@ -35,6 +38,10 @@ public class PhoneNumber extends BaseResource {
 
   public NumberType getType() {
     return type;
+  }
+
+  public String getCity() {
+    return city;
   }
 
   public String getCountry() {
@@ -87,6 +94,14 @@ public class PhoneNumber extends BaseResource {
 
   public String getSmsRate() {
     return smsRate;
+  }
+
+  public Boolean getMmsEnabled() {
+    return mmsEnabled;
+  }
+
+  public String getMmsRate() {
+    return mmsRate;
   }
 
   public Boolean getVoiceEnabled() {
