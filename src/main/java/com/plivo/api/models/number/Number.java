@@ -16,8 +16,12 @@ public class Number extends BaseResource {
   private String resourceUri;
   private Boolean smsEnabled;
   private String smsRate;
+  private Boolean mmsEnabled;
+  private String mmsRate;
   private Boolean voiceEnabled;
   private String voiceRate;
+  private String city;
+  private String country;
   private String subAccount;
   private Boolean active;
 
@@ -97,12 +101,28 @@ public class Number extends BaseResource {
     return smsRate;
   }
 
+  public Boolean getMmsEnabled() {
+    return mmsEnabled;
+  }
+
+  public String getMmsRate() {
+    return mmsRate;
+  }
+
   public Boolean getVoiceEnabled() {
     return voiceEnabled;
   }
 
   public String getVoiceRate() {
     return voiceRate;
+  }
+
+  public String getCity() {
+    return city;
+  }
+
+  public String getCountry() {
+    return country;
   }
 
   public NumberUpdater updater() {
