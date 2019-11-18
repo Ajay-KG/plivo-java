@@ -14,6 +14,7 @@ public class PhoneNumberLister extends Lister<PhoneNumber> {
   private String services;
   private String lata;
   private String rateCenter;
+  private String city;
 
   PhoneNumberLister(String countryIso) {
     if (!Utils.allNotNull(countryIso)) {
@@ -51,6 +52,10 @@ public class PhoneNumberLister extends Lister<PhoneNumber> {
     return this.rateCenter;
   }
 
+  public String city() {
+    return this.city;
+  }
+
   public PhoneNumberLister type(final NumberType type) {
     this.type = type;
     return this;
@@ -78,6 +83,11 @@ public class PhoneNumberLister extends Lister<PhoneNumber> {
 
   public PhoneNumberLister rateCenter(final String rateCenter) {
     this.rateCenter = rateCenter;
+    return this;
+  }
+
+  public PhoneNumberLister city(final String city) {
+    this.city = city;
     return this;
   }
 
